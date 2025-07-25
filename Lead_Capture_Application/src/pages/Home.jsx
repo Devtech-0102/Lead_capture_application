@@ -1,5 +1,6 @@
 import React from 'react'
 import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import { motion } from "motion/react"
 const { Header, Content, Footer } = Layout;
 const items = Array.from({ length: 5 }).map((_, index) => ({
     key: index + 1,
@@ -32,7 +33,7 @@ function Home() {
                         borderRadius: borderRadiusLG,
                     }}
                 >
-                    Content
+                     <motion.div animate={{ x: 100 }} />
                 </div>
             </Content>
             <Footer style={{ textAlign: 'center' }}>

@@ -12,9 +12,12 @@
   "dependencies": {
     "@ant-design/icons": "^6.0.0",
     "antd": "^5.26.6",
+    "framer-motion": "^12.23.9",
+    "motion": "^12.23.9",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router-dom": "^7.7.1"
+    "react-router-dom": "^7.7.1",
+    "react-scroll": "^1.9.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",

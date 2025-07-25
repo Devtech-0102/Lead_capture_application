@@ -6,3 +6,32 @@ body,
     margin: 0;
     padding: 0;
 }
+
+:root {
+    --bg: #ffffff;
+    --text: #111111;
+    --card-bg: #f9f9f9;
+}
+
+[data-theme='dark'] {
+    --bg: #141414;
+    --text: #e6e6e6;
+    --card-bg: #1e1e1e;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.ant-card {
+    background: var(--card-bg) !important;
+    color: var(--text);
+}
+
+section {
+    background: var(--bg);
+    color: var(--text);
+    transition: all 0.3s ease;
+}
