@@ -10,7 +10,7 @@ function Headers() {
    return (
     // darkMode
     <Header style={{
-      position: 'fixed', zIndex: 1, width: '100%',
+      position: 'fixed', top:0, zIndex: 1, width: '100%',
       // backgroundColor: darkMode ? '#1f1f1f' : '#001529'
     }}>
       <div className="logo" style={{ color: '#fff', float: 'left', fontWeight: 'bold' }}>
@@ -35,6 +35,7 @@ function Headers() {
       </div> */}
     </Header>
   );
+
 }
 
 export default Headers
