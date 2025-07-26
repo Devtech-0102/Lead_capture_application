@@ -54,3 +54,86 @@ section {
     color: var(--text);
     transition: all 0.3s ease;
 }
+
+// .desktop-menu {
+//     display: flex;
+//     align-items: center;
+// }
+
+// .mobile-menu {
+//     display: none;
+// }
+
+
+// @media (max-width: 768px) {
+//     .desktop-menu {
+//         display: none;
+//     }
+
+//     .mobile-menu {
+//         display: flex;
+//         align-items: center;
+//     }
+// }
+
+/* Hide desktop menu on small screens */
+
+.top-bar {
+  background-color: #1f1f1f;
+  color: #fff;
+  padding: 0.4rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.top-bar-right > * {
+  margin-left: 12px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.main-navbar {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.logo {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.desktop-menu {
+  display: flex;
+  align-items: center;
+}
+
+.search-box {
+  margin-left: 1rem;
+  width: 200px;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+/* Responsive Behavior */
+@media (max-width: 768px) {
+  .desktop-menu {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  .search-box {
+    display: none;
+  }
+}
