@@ -1,5 +1,4 @@
 import React from 'react'
-import Hero from '../components/Hero'
 import About from '../components/About'
 import Services from '../components/Services'
 import Gallery from '../components/Gallary'
@@ -7,11 +6,12 @@ import Testimonials from '../components/Testimonials'
 import Careers from '../components/Careers'
 import Blog from '../components/Blog'
 import Contact from '../components/Contact'
+import Banner from '../components/Banner'
 
 function Section() {
   return (
     <>
-        <Hero />
+        <Banner />
         <About />
         <Services />
         <Gallery />

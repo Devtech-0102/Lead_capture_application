@@ -26,7 +26,7 @@ const Headers = () => {
       <div className="row navbar-section">
         <div className="col-3 logo">
           <img src="/logo.webp" alt="Logo" />
-          <span>Insight eye</span>
+          <span>Lead-Capture</span>
         </div>
 
         <div className="col-5 nav-links">

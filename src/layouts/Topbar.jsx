@@ -11,8 +11,8 @@ const Topbar = () => {
           <span><MailOutlined /> info@example.com</span>
           <span><ClockCircleOutlined /> Mon - Fri 8.00 am - 6.00 pm</span>
         </Col>
-        <Col>
-          <span><UserOutlined /> Login</span>
+        <Col className="right-icons">
+          <span><span style={{fontSize:'20px', marginLeft:'10px'}}><i className="bi bi-person-circle" ></i></span> Login</span>
           <span className="social-icons">
             <FacebookFilled />
             <InstagramFilled />

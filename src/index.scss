@@ -3,66 +3,67 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
-    --primary: #242424;
-    --secondary: rgba(255, 255, 255, 0.87);
-    --font-inter: 'Inter', sans-serif;
-    --font-dmsans: 'DM Sans', sans-serif;
-    --navbar-height: 80px;
+  --primary: #242424;
+  --secondary: rgba(255, 255, 255, 0.87);
+  --font-inter: 'Inter', sans-serif;
+  --font-dmsans: 'DM Sans', sans-serif;
+  --navbar-height: 80px;
 
-    font-family: var(--font-dmsans);
-    line-height: 1.5;
-    font-weight: 400;
-    color: var(--secondary);
-    background-color: var(--primary);
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-dmsans);
+  line-height: 1.5;
+  font-weight: 400;
+  color: var(--secondary);
+  background-color: var(--primary);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-    --bg: #ffffff;
-    --text: #111111;
-    --card-bg: #f9f9f9;
+  --bg: #ffffff;
+  --text: #111111;
+  --card-bg: #f9f9f9;
 }
 
 
 html,
 body,
 #root {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: var(--bg);
-    color: var(--text);
-    transition: background-color 0.3s ease, color 0.3s ease;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 
 [data-theme='dark'] {
-    --bg: #141414;
-    --text: #e6e6e6;
-    --card-bg: #1e1e1e;
+  --bg: #141414;
+  --text: #e6e6e6;
+  --card-bg: #1e1e1e;
 }
 
 
 .ant-card {
-    background: var(--card-bg) !important;
-    color: var(--text);
+  background: var(--card-bg) !important;
+  color: var(--text);
 }
 
 section {
-    background: var(--bg);
-    color: var(--text);
-    transition: all 0.3s ease;
+  background: var(--bg);
+  color: var(--text);
+  transition: all 0.3s ease;
 }
 
 
 
 // --------------------------------------
-.topbar { position: fixed;
+.topbar {
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
-   z-index: 999;
+  z-index: 999;
   background: #111;
   color: #fff;
   font-size: 14px;
@@ -70,16 +71,21 @@ section {
   display: flex;
   justify-content: space-between;
 }
+
 .topbar span {
   margin-right: 20px;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
 }
-.social-icons > * {
+.right-icons{
+ display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icons>* {
   margin-left: 10px;
   font-size: 16px;
   cursor: pointer;
 }
-
-
-
