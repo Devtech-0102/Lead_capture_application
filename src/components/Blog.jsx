@@ -54,7 +54,7 @@ const Blog = () => {
               ref={(el) => (cardsRef.current[idx] = el)}
               style={{ margin: '20px' }}
             >
-              <Card title={post.title} bordered={false}>
+              <Card title={post.title} variant="outlined">
                 <p>{post.excerpt}</p>
                 <a href="#">Read More →</a>
               </Card>

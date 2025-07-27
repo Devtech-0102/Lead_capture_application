@@ -32,7 +32,7 @@ const Testimonials = () => (
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: index * 0.2 }}
           >
-            <Card bordered={false} style={{ margin: '20px' }}>
+            <Card variant="outlined" style={{ margin: '20px' }}>
               <p>"{item.feedback}"</p>
               <strong>{item.name}</strong><br />
               <span style={{ color: '#888' }}>{item.title}</span>

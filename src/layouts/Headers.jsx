@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { Link } from "react-scroll";
 import "./Headers.scss";
 
+
 const Headers = () => {
   const navLinks = [{ name: "Home", path: 'hero' }, { name: "About Us", path: 'about' }, { name: "Services", path: 'services' }, { name: "Blog", path: 'blog' }, { name: "Contact", path: 'contact' }];
   const linkRefs = useRef([]);
