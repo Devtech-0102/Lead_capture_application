@@ -7,18 +7,16 @@ import Hero from './components/Hero'
 import AppFooter from './layouts/AppFooter'
 import Headers from './layouts/Headers'
 import Section from './layouts/Section'
+import Topbar from './layouts/Topbar'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-
+      <Topbar />
       <Headers />
-      <div style={{ marginTop: 64 }}>
-        <Section />
-      </div>
-
+      <Section />
       <AppFooter />
     </>
   )
