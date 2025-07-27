@@ -1,4 +1,6 @@
+import { Link } from 'react-scroll';
 import './About.scss'
+
 
 const About = () => (
   // <section id="about" style={{ padding: '80px 20px' }}>
