@@ -1,0 +1,72 @@
+.about-us{
+    background-color: #fff;
+    color: #333;
+    padding: 60px 30px;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-heading{
+    font-size: 36px;
+    color: #4b0082;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.about-intro{
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.about-grid{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.about-section{
+    flex: 1 1 45%;
+    min-width: 300px;
+}
+
+.section-title{
+    font-size: 22px;
+    color: #4b0082;
+    margin-bottom: 10px;
+}
+
+.list{
+    list-style: disc;
+    // margin-left: 20px;
+    margin: 0 0 20px 20px;
+    // margin-bottom: 20px;
+}
+
+.call-to-action{
+    // font-size: 20px;
+    background-color: #f0f0ff;
+    padding: 30px;
+    margin-top: 40px;
+    border-left: 4px solid #4b0082;
+}
+
+.call-to-action h3{
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #4b0082;
+}
+
+.contact-link{
+    color: #4b0082;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+  text-decoration: underline;
+}
