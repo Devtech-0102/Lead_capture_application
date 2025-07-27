@@ -40,7 +40,7 @@ const Headers = () => {
               duration={500}
               offset={-80}
               spy={true}
-              className="nav-link"
+              className="nav-link button-89"
               onMouseEnter={() => {
                 gsap.to(linkRefs.current[index], {
                   scale: 0.9,
@@ -63,12 +63,12 @@ const Headers = () => {
           ))}
 
         </div>
-        <div className="col-4">
-          <div className="right-section">
-            <PhoneOutlined />
-            <span>(239)-543-217-0108</span>
-            <Button className="contact-btn button-48" type="primary">Let's Contact →</Button>
-          </div>
+        <div className="col-4 right-section">
+
+          <PhoneOutlined />
+          <span>(239)-543-217-0108</span>
+          <Button className="contact-btn button-48" type="primary">Let's Contact →</Button>
+
         </div>
       </div>
 
