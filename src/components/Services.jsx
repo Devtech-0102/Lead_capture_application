@@ -13,7 +13,7 @@ const Services = () => (
     <Row gutter={16}>
       {services.map((service, idx) => (
         <Col span={8} key={idx}>
-          <Card title={service.icon} bordered={false}>
+          <Card title={service.icon} variant="outlined">
             <h3>{service.title}</h3>
             <p>{service.desc}</p>
           </Card>
