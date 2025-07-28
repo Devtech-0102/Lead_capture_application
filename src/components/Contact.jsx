@@ -1,74 +1,138 @@
-import React, { useRef, useEffect } from 'react';
+// src/components/ContactUs.jsx
+import React, { useEffect, useRef, useState } from 'react';
 import { gsap, ScrollTrigger } from '../js/gsapConfig';
-import './Contact.scss';
+import '../utils/Button.scss'
 
+gsap.registerPlugin(ScrollTrigger);
+import { motion } from 'framer-motion';
+import './Contact.scss';
+import { Button } from 'antd';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Contact = () => {
-  const imgRef = useRef(null);
-  const formRef = useRef(null);
+  const aboutRef = useRef(null);
+  const textRef = useRef(null);
+  const [scrollDirection, setScrollDirection] = useState('down');
+  const [lastScrollY, setLastScrollY] = useState(0);
 
- 
- useEffect(() => {
-  if (imgRef.current && formRef.current) {
-    gsap.from(imgRef.current, {
-      scrollTrigger: {
-        trigger: imgRef.current,
-        start: 'top 80%',
+  // Right side form animation
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        setScrollDirection('down');
+      } else {
+        setScrollDirection('up');
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // Animation based on scroll direction
+          if (scrollDirection === 'down') {
+            entry.target.classList.add('animate-up');
+          } else {
+            entry.target.classList.add('animate-down');
+
+          }
+        } else {
+          entry.target.classList.remove('animate-down', 'animate-up');
+        }
       },
-      x: -100,
-      opacity: 0,
-      duration: 1,
-    });
+      { threshold: 0.1 }
+    );
 
-    gsap.from(formRef.current, {
-      scrollTrigger: {
-        trigger: formRef.current,
-        start: 'top 80%',
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+    }
+
+    return () => {
+      if (aboutRef.current) {
+        observer.unobserve(aboutRef.current);
+      }
+    };
+  }, [scrollDirection]);
+
+
+  // Left side text animations
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY) {
+        setScrollDirection('down');
+      } else {
+        setScrollDirection('up');
+      }
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          // Animation based on scroll direction
+          if (scrollDirection === 'down') {
+            entry.target.classList.add('animate-down');
+          } else {
+            entry.target.classList.add('animate-up');
+          }
+        } else {
+          entry.target.classList.remove('animate-down', 'animate-up');
+        }
       },
-      x: 100,
-      opacity: 0,
-      duration: 1,
-    });
+      { threshold: 0.1 }
+    );
 
-    // ✅ Refresh ScrollTrigger to re-calculate layout
-    ScrollTrigger.refresh();
-  }
-}, []);
+    if (textRef.current) {
+      observer.observe(textRef.current);
+    }
+
+    return () => {
+      if (textRef.current) {
+        observer.unobserve(textRef.current);
+      }
+    };
+  }, [scrollDirection]);
+
 
   return (
-    <section id="contact">
-      <div className="contact_us">
-        <div className="row contact-row">
-          <div className="col contact-img-blog" ref={imgRef}>
-            <img className="mainImg" src="/pro2.jpeg" alt="Contact" />
-          </div>
-          <div className="col contact-form" ref={formRef}>
-            <p className="text-blk heading">Contact Me</p>
-            <form className="formTable" id="izml">
-              <div className="row">
-                <div className="col">
-                  <label className="form-label">Full Name</label>
-                  <input className="fullName" id="fullName" name="fullName" type="text" />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col">
-                  <label className="form-label">Email Address</label>
-                  <input className="email" id="email" name="email" type="email" />
-                </div>
-              </div>
-              <div className="row">
-                <div className="col">
-                  <label className="form-label">Message</label>
-                  <textarea className="message" cols="30" id="message" name="message" rows="6"></textarea>
-                </div>
-              </div>
-              <div className="row">
-                <button className="submit" type="submit">Send Message</button>
-              </div>
-            </form>
-          </div>
+    <section className="contact-section">
+      <div ref={textRef}
+        className="directional-text contact-info">
+        <h2 >
+          Have Any Questions?
+        </h2>
+        <p>
+         Have questions, feedback, or need support? Fill out the form or reach us through the details below.
+        </p>
+        <div className="contact-items">
+          <div className='cont-det'><strong>📞</strong><span>+11223344550</span></div>
+          <div className='cont-det'><strong>📧</strong><span>info@example.com</span></div>
+          <div className='cont-det'><strong>📍</strong><span>1234 Chennai, Tamilnadu, INDIA</span></div>
         </div>
+
+      </div>
+
+
+
+      <div className="contact-form" ref={aboutRef}>
+        <input type="text" placeholder="Enter Your Name *" />
+        <input type="email" placeholder="Enter Your Email *" />
+        <textarea placeholder="Enter Your Message *" />
+         <Button className="button-48" type="primary" style={{padding:'18px 0px 25px 0px'}}>Send Us →</Button>
+        {/* <button className='btn-48'></button> */}
       </div>
     </section>
   );

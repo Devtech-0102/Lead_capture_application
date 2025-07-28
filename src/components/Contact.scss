@@ -1,85 +1,173 @@
-#contact {
-  padding: 60px 20px;
+/* src/components/ContactUs.css */
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 50vh;
+  // background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1200x800') center/cover no-repeat;
 }
 
-.contact_us {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-
-  .contact-row {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .contact-img-blog,
-  .contact-form {
-    flex: 1 1 50%;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-
-  .mainImg {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
-  }
-
-  .contact-form {
-    background-color: crimson;
-    color: #fff;
-    border-radius: 10px;
-
-    .heading {
-      font-size: 28px;
-      font-weight: bold;
-      margin-bottom: 20px;
-    }
-
-    .form-label {
-      font-weight: 500;
-      margin-bottom: 8px;
-      display: block;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border-radius: 5px;
-      border: none;
-    }
-
-    .submit {
-      padding: 10px 20px;
-      background-color: #fff;
-      color: crimson;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-weight: bold;
-      transition: 0.3s;
-
-      &:hover {
-        background-color: #ffe6e6;
-      }
-    }
-  }
+.contact-info,
+.contact-form {
+  flex: 1 1 400px;
+  padding: 40px;
+  color: white;
 }
 
-/* Responsive */
-@media screen and (max-width: 768px) {
-  .contact-row {
+.contact-info {
+  //width: 60%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  // align-items: center;
+  background-image: url('../../public/pro2.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  z-index: 2;
+}
+
+.contact-info::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(29, 28, 28, 0.6);
+  /* dark overlay */
+  z-index: 1;
+}
+
+.contact-info h2 {
+  color: white;
+  z-index: 5;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contact-info p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  font-size: 17px;
+  text-align: center;
+  color: white;
+  z-index: 5;
+}
+
+.contact-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* centers each row as a block */
+  z-index: 5;
+}
+
+.contact-info .cont-det {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  color: white;
+  z-index: 5;
+  font-size: 1rem;
+}
+
+.contact-info .cont-det strong {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  display: inline-block;
+  width: 25px;
+  text-align: center;
+}
+
+.contact-info .cont-det span {
+  display: inline-block;
+}
+
+
+.contact-form {
+  //  width: 40%;
+  background-image: url('../../public/contactpage2.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  //  background: #bbb6b6;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact-form input,
+.contact-form textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  border-bottom: 2px solid #b6b6b6;
+  border-radius: 5px;
+  outline: none;
+  font-size: 1rem;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+
+@media (max-width: 768px) {
+  .contact-section {
     flex-direction: column;
   }
+}
 
-  .contact-img-blog,
-  .contact-form {
-    flex: 1 1 100%;
-    padding: 10px;
+/* DirectionalScrollText.css */
+.directional-text {
+  opacity: 0;
+  transition: all 0.6s ease-out;
+}
+
+.animate-down {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slideDown 0.6s ease-out;
+}
+
+.animate-up {
+  opacity: 1;
+  transform: translateY(0);
+  animation: slideUp 0.6s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
   }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contact-form input,
+.contact-form textarea {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease; // optional, for smoother interaction
 }

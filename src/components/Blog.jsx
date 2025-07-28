@@ -1,7 +1,6 @@
 import { useEffect, useRef } from 'react';
 import { Card, Row, Col } from 'antd';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { gsap, ScrollTrigger } from '../js/gsapConfig';
 
 gsap.registerPlugin(ScrollTrigger);
 

@@ -1,9 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
 import { MenuOutlined, PhoneOutlined } from "@ant-design/icons";
 import { Button, Drawer } from "antd";
-import gsap from "gsap";
+import { gsap, ScrollTrigger } from '../js/gsapConfig';
 import { Link } from "react-scroll";
 import "./Headers.scss";
+import './../utils/Button.scss'
 
 
 const Headers = () => {
@@ -11,15 +12,15 @@ const Headers = () => {
   const linkRefs = useRef([]);
   const [open, setOpen] = useState(false);
 
-  useEffect(() => {
-    gsap.from(linkRefs.current, {
-      y: -20,
-      opacity: 0,
-      stagger: 0.1,
-      duration: 0.8,
-      ease: "power3.out",
-    });
-  }, []);
+  // useEffect(() => {
+  //   gsap.from(linkRefs.current, {
+  //     y: -20,
+  //     opacity: 0,
+  //     stagger: 0.1,
+  //     duration: 0.8,
+  //     ease: "power3.out",
+  //   });
+  // }, []);
 
   return (
     <>
@@ -42,22 +43,22 @@ const Headers = () => {
               offset={-80}
               spy={true}
               className="nav-link button-89"
-              onMouseEnter={() => {
-                gsap.to(linkRefs.current[index], {
-                  scale: 0.9,
-                  color: "#ff4d4f",
-                  duration: 0.3,
-                  ease: "power2.out",
-                });
-              }}
-              onMouseLeave={() => {
-                gsap.to(linkRefs.current[index], {
-                  scale: 1,
-                  color: "#000",
-                  duration: 0.3,
-                  ease: "power2.out",
-                });
-              }}
+              // onMouseEnter={() => {
+              //   gsap.to(linkRefs.current[index], {
+              //     scale: 0.9,
+              //     color: "#ff4d4f",
+              //     duration: 0.3,
+              //     ease: "power2.out",
+              //   });
+              // }}
+              // onMouseLeave={() => {
+              //   gsap.to(linkRefs.current[index], {
+              //     scale: 1,
+              //     color: "#000",
+              //     duration: 0.3,
+              //     ease: "power2.out",
+              //   });
+              // }}
             >
               {text.name}
             </Link>
@@ -68,7 +69,7 @@ const Headers = () => {
 
           <PhoneOutlined />
           <span>(239)-543-217-0108</span>
-          <Button className="contact-btn button-48" type="primary">Let's Contact →</Button>
+          <Button className="button-48" type="primary">Let's Contact →</Button>
 
         </div>
       </div>

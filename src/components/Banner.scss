@@ -1,19 +1,32 @@
 .banner {
   text-align: center;
-  padding: 150px 20px;
+   padding: 150px 20px;
   background-size: cover;
   background-position: center;
   color: white;
 }
+
 // banners section
 .banner-1 {
+  width: 100%;
+ // height: 50vh;
   background-image: url('/banner/banner1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-clip: border-box;
 }
 
 .banner-2 {
   background-image: url('/banner/banner2.jpg');
+  background-size: cover;
+  background-position: center;
 }
 
 .banner-3 {
   background-image: url('/banner/banner3.jpg');
+  background-size: cover;
+  background-position: center;
+
+
 }
