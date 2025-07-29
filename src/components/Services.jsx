@@ -5,19 +5,19 @@ const services = [
   {
     title: "Web Development",
     icon: CodeOutlined,
-    desc: "Build high-performance websites with React, Angular, and Java.",
+    desc: "Custom-built, responsive, and lightning-fast websites using modern technologies like React, Angular, and Java — optimized for performance, scalability, and SEO.",
     image: "https://images.unsplash.com/photo-1547658719-da2b51169166?w=500"
   },
   {
     title: "Mobile Apps",
     icon: MobileOutlined,
-    desc: "Cross-platform apps with React Native or Flutter.",
+    desc: "Seamless cross-platform mobile apps crafted with React Native and Flutter — delivering native performance, intuitive UI/UX, and robust functionality across Android and iOS.",
     image: "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=500"
   },
   {
     title: "Cloud Solutions",
     icon: CloudOutlined,
-    desc: "Scalable cloud infrastructure.",
+    desc: "End-to-end cloud infrastructure solutions for scalability, security, and performance — including migration, DevOps automation, and cloud-native architecture on AWS, Azure, or GCP.",
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500"
   },
 ];
