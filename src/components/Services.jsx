@@ -19,7 +19,6 @@ const services = [
     icon: CloudOutlined,
     desc: "Scalable cloud infrastructure.",
     image: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500"
-    
   },
 ];
 
