@@ -1,0 +1,18 @@
+.tech_stack_section {
+  background: radial-gradient(circle at top left, #1a1a2e, #0f0f1a);
+  padding: 80px 0;
+}
+
+.tech_icon {
+  /* background: rgba(255, 255, 255, 0.05); */
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* backdrop-filter: blur(5px); */
+  display: flex;
+  justify-content: center;
+}
+
+.tech_icon:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
+}
