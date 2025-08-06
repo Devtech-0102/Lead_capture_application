@@ -19,7 +19,7 @@ const techStack = [
   ],
   [
     { name: "aws", icon: "/assets/icons/tech/aws.png" },
-    { name: "PostgreSQL", icon: "/assets/icons/tech/postgre.png" },
+    { name: "Kubernetes", icon: "/assets/icons/tech/kubernetes.png" },
     { name: "Docker", icon: "/assets/icons/tech/docker.png" },
     { name: "redhat", icon: "/assets/icons/tech/redhat.png" }
   ],
@@ -54,7 +54,7 @@ const TechStack = () => {
         <h2 className="text-center text-white mb-5">Our Tech Stack</h2>
         <div className="row justify-content-center">
           {techStack.map((group, groupIndex) => (
-            <div className="d-flex py-2 justify-content-around" key={groupIndex}>
+            <div  className={`${styles.tech_line}`} key={groupIndex}>
               {group.map((tech, index) => (
                 <div key={`${groupIndex}-${index}`} className={`${styles.tech_icon} tech_icon p-3 rounded`}>
                   <img

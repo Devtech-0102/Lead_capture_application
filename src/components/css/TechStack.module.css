@@ -16,3 +16,12 @@
   transform: scale(1.05);
   box-shadow: 0 0 15px rgba(0, 255, 255, 0.3);
 }
+
+.tech_line{
+  display: flex;
+  padding: 10px;
+  justify-content: space-around;
+}
+.tech_line:nth-child(2){
+  justify-content: space-evenly; 
+}

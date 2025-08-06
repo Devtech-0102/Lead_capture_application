@@ -12,8 +12,8 @@ import TechStack from '../components/TechStack'
 function Section() {
   return (
     <>
-        {/* <Banner />
-        <About /> */}
+        <Banner />
+        <About />
         <Services />
         <Gallery />
         <Testimonials />
