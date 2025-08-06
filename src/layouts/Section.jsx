@@ -7,6 +7,7 @@ import Careers from '../components/Careers'
 import Blog from '../components/Blog'
 import Contact from '../components/Contact'
 import Banner from '../components/Banner'
+import TechStack from '../components/TechStack'
 
 function Section() {
   return (
@@ -16,6 +17,7 @@ function Section() {
         <Services />
         <Gallery />
         <Testimonials />
+        <TechStack />
         <Careers />
         <Blog />
         <Contact />
